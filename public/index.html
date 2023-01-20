@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waifu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="download.jpeg" alt="">
+    <div class="container">
+    </div>
+    <script>
+        fetch("/api/waifu/get")
+        .then((response) => response.json())
+        .then((data)=>{
+                let div=document.createElement("div");
+                let head = document.createElement("h1");
+                let isi1 = document.createElement("h4");
+                let isi2 = document.createElement("h4");
+                let isi3 = document.createElement("h4");
+                let isi4 = document.createElement("h4");
+                head.textContent=data.judul;
+                isi1.textContent=data.pengertian1;
+                isi2.textContent=data.pengertian2;
+                isi3.textContent=data.pengertian3;
+                isi4.textContent=data.pengertian4;
+                div.appendChild(head);
+                div.appendChild(isi1);
+                div.appendChild(isi2);
+                div.appendChild(isi3);
+                div.appendChild(isi4);
+                document.querySelector(".container").appendChild(div);
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+body{
+    font-family: sans-serif;
+    background-image: url("download.jpeg");
+}
+.container{
+    text-align: center;
+    color: white;
+    background-color: rgb(49, 47, 47);
+    width: 50%;
+    margin-left: 300px;
+}
